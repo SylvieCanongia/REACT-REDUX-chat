@@ -1,2 +1,3 @@
-# REACT-REDUX-chat
-Un tchat réalisé avec React et Redux
+# REACT REDUX CHAT
+
+Un tchat réalisé avec React et Redux.
