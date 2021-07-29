@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { Send } from 'react-feather';
 import './form.scss';
 
 const Form = () => (
   <form className="form">
     <input type="text" className="form__message" placeholder="Entrez votre message" />
-    <input type="submit" className="form__submit" value=">" />
+    <button type="submit" className="form__submit">
+      <Send />
+    </button>
   </form>
 );
 
