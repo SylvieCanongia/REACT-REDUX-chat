@@ -10,12 +10,12 @@ import Messages from 'src/components/Messages';
 import './styles.scss';
 
 // == Composant
-const App = () => (
-  <div className="app">
+const Chatroom = () => (
+  <div className="chatroom">
     <Messages />
     <Form />
   </div>
 );
 
 // == Export
-export default App;
+export default Chatroom;
