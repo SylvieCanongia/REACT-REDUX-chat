@@ -2,7 +2,7 @@
 
 .message {
 
-  & .message__content {
+  .message__content {
   background: vars.$white;
   border: 1px solid vars.$grey-light;
   margin-block-end: vars.$space-base * 2;
@@ -10,7 +10,7 @@
   border-radius: vars.$radius;
   }
 
-  & .message_author {
+  .message_author {
     padding-block: vars.$space-base;
   }
 }
