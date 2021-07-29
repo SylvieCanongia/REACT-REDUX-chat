@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+
+.form {
+
+  & .form__message, & .form__submit {
+    height: vars.$size-base * 1.2;
+  }
+
+  & .form__submit {
+    width: 40px;
+  }
+}
