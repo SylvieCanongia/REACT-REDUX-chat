@@ -21,6 +21,8 @@ const initialState = {
       content: 'Ah mince ! Nous devons aller la délivrer !',
     },
   ],
+  // input content for entering a message
+  inputMessage: '',
 };
 
 function chatReducer(state = initialState, action = {}) {
