@@ -6,6 +6,7 @@ const initialState = {
   messages: [],
   // input content for entering a message
   inputMessage: '',
+  pseudo: 'Mario',
 };
 
 function chatReducer(state = initialState, action = {}) {
@@ -22,7 +23,7 @@ function chatReducer(state = initialState, action = {}) {
 
       const message = {
         id: getHighestId(state.messages) + 1,
-        username: 'Super Chat',
+        username: state.pseudo,
         content: state.inputMessage,
       };
 
