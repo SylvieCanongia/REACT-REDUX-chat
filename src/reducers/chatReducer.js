@@ -3,7 +3,19 @@ import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions/chatActions';
 import { getHighestId } from 'src/utils';
 
 const initialState = {
-  messages: [],
+  messages: [
+    {
+      id: 1,
+      username: 'Mario',
+      content: 'Coucou !',
+    },
+    {
+      id: 2,
+      username: 'Luidgi',
+      content: 'Hello !',
+    },
+
+  ],
   // input content for entering a message
   inputMessage: '',
   pseudo: 'Mario',

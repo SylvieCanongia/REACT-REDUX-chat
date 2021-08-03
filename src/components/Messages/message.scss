@@ -1,16 +1,50 @@
 @use 'src/styles/vars';
 
 .message {
+  position: relative;
 
   .message__content {
   background: vars.$white;
-  border: 1px solid vars.$grey-light;
-  margin-block-end: vars.$space-base * 2;
-  padding: vars.$space-base * 1.8;
-  border-radius: vars.$radius;
+  margin-block-end: vars.$space-base * 3.5;
+  padding: vars.$space-base * 2.5 vars.$space-base * 4;
+  border-radius: vars.$radius-very-large;
+  width: fit-content;
+  color: vars.$blue-medium;
   }
 
-  .message_author {
-    padding-block: vars.$space-base;
+  .arrow-up::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 16px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 15px solid vars.$white;
+    position: absolute;
+    top: 23px;
+  }
+
+  .message__author {
+    margin-inline: vars.$space-base * 4;
+    margin-block-end: vars.$space-base * 2;
+  }
+
+  // formatting of messages from other users
+  &.message--other {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    .arrow-up::before {
+      content: '';
+      width: 0; 
+      height: 0; 
+      border-right: 16px solid transparent;
+      border-left: 0px solid transparent;
+      border-bottom: 15px solid vars.$white;
+      position: absolute;
+      top: 23px;
+      right: 30px;
+    }
   }
 }
+

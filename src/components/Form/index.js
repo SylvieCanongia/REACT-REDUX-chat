@@ -15,14 +15,14 @@ const Form = ({ value, setValue, manageSubmit }) => {
       <input
         type="text"
         className="form__message"
-        placeholder="Entrez votre message"
+        placeholder="Saisissez votre message"
         value={value}
         onChange={(event) => {
           setValue(event.target.value);
         }}
       />
       <button type="submit" className="form__submit">
-        <Send />
+        <Send className="form__submit__icon" />
       </button>
     </form>
   );
