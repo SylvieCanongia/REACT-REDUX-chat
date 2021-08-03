@@ -1,7 +1,7 @@
 // == Import npm
 import React from 'react';
 
-import Form from 'src/components/Form';
+import Form from 'src/containers/Form';
 import Messages from 'src/containers/Messages';
 
 // == Import
