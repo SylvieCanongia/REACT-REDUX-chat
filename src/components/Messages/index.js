@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Message from './Message';
+import Message from 'src/containers/Messages/Message';
 
 import './messages.scss';
 

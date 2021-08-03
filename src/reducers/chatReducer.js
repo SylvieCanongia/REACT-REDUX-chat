@@ -3,9 +3,22 @@ import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions/chatActions';
 import { getHighestId } from 'src/utils';
 
 const initialState = {
-  messages: [],
+  messages: [
+    {
+      id: 1,
+      username: 'Mario',
+      content: 'Coucou !',
+    },
+    {
+      id: 2,
+      username: 'Luidgi',
+      content: 'Hello !',
+    },
+
+  ],
   // input content for entering a message
   inputMessage: '',
+  pseudo: 'Mario',
 };
 
 function chatReducer(state = initialState, action = {}) {
@@ -22,7 +35,7 @@ function chatReducer(state = initialState, action = {}) {
 
       const message = {
         id: getHighestId(state.messages) + 1,
-        username: 'Super Chat',
+        username: state.pseudo,
         content: state.inputMessage,
       };
 

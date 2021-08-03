@@ -1,6 +1,6 @@
 // TYPOGRAPHY
 
-$font-size-base: 1em;
+$font-size-base: 1.2em;
 
 $font-size-medium: 1.2rem;
 $font-size-large: 1.5rem;
@@ -22,11 +22,15 @@ $space-base: 8px;
 $white: hsl(100deg, 100%, 100%);
 $black: hsl(0deg, 0%, 0%);
 $grey-light: hsl(204, 8%, 76%);
+$background: hsl(204, 66%, 22%);
+$blue-light: hsl(204, 63%, 84%);
+$blue-medium: hsl(204, 63%, 40%);
 
 // Border Radius
 $radius: 5px;
 $radius-medium: 10px;
 $radius-large: 15px;
+$radius-very-large: 30px;
 
 // SIZES
 
