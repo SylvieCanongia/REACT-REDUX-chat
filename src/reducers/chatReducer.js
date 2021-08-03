@@ -1,28 +1,9 @@
-import { SET_INPUT_VALUE } from 'src/actions/chatActions';
+import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions/chatActions';
+
+import { getHighestId } from 'src/utils';
 
 const initialState = {
-  messages: [
-    {
-      id: 1,
-      username: 'Mario',
-      content: 'Hello ! T\'as pas vu Princesse Peach ?',
-    },
-    {
-      id: 2,
-      username: 'Luidgi',
-      content: 'Non désolé...',
-    },
-    {
-      id: 3,
-      username: 'Mario',
-      content: 'Je crois qu\'elle a été enlevée par Bowser !',
-    },
-    {
-      id: 4,
-      username: 'Luidgi',
-      content: 'Ah mince ! Nous devons aller la délivrer !',
-    },
-  ],
+  messages: [],
   // input content for entering a message
   inputMessage: '',
 };
@@ -34,6 +15,25 @@ function chatReducer(state = initialState, action = {}) {
         ...state,
         inputMessage: action.value,
       };
+
+      // braces here are to limit the scope to this case only
+    case ADD_MESSAGE: {
+      // console.log(`On va ajouter le message ${state.inputMessage}`);
+
+      const message = {
+        id: getHighestId(state.messages) + 1,
+        username: 'Super Chat',
+        content: state.inputMessage,
+      };
+
+      return {
+        ...state,
+        // create a new array and dump each element of state.messages + add the new message
+        messages: [...state.messages, message],
+        // clears the field
+        inputMessage: '',
+      };
+    }
 
     default:
       return state;

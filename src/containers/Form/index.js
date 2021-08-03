@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { setInputValue } from 'src/actions/chatActions';
+import { setInputValue, addMessage } from 'src/actions/chatActions';
 
 // presentation component import
 import Form from 'src/components/Form';
@@ -13,6 +13,9 @@ const mapDispatchToProps = (dispatch) => ({
   setValue: (newValue) => {
     const action = setInputValue(newValue);
     dispatch(action);
+  },
+  manageSubmit: () => {
+    dispatch(addMessage());
   },
 });
 
