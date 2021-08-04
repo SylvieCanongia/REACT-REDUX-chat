@@ -4,4 +4,5 @@
   margin-block-end: vars.$space-base * 2;
   padding: vars.$space-base * 2.5;
   border-radius: vars.$radius;
+  overflow-y: scroll;
 }

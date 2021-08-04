@@ -14,7 +14,6 @@ const initialState = {
       username: 'Luidgi',
       content: 'Hello !',
     },
-
   ],
   // input content for entering a message
   inputMessage: '',
