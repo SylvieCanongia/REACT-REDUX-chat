@@ -33,6 +33,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    .message__content {
+      background-color: vars.$blue-medium;
+      color: vars.$white;
+    }
     
     .arrow-up::before {
       content: '';
@@ -40,7 +45,7 @@
       height: 0; 
       border-right: 16px solid transparent;
       border-left: 0px solid transparent;
-      border-bottom: 15px solid vars.$white;
+      border-bottom: 15px solid vars.$blue-medium;
       position: absolute;
       top: 23px;
       right: 30px;

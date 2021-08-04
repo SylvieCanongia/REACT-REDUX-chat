@@ -5,8 +5,8 @@ import classNames from 'classnames';
 
 import './message.scss';
 
-const Message = ({ username, content, pseudo }) => {
-  const cssClass = classNames('message', { 'message--other': pseudo !== username });
+const Message = ({ username, content, isOwn }) => {
+  const cssClass = classNames('message', { 'message--other': isOwn });
 
   return (
     <section className={cssClass}>
@@ -20,7 +20,7 @@ Message.propTypes = {
   username: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   // current user pseudo
-  pseudo: PropTypes.string.isRequired,
+  isOwn: PropTypes.bool.isRequired,
 };
 
 export default Message;
