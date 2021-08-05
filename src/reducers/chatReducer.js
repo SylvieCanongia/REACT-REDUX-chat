@@ -1,6 +1,7 @@
-import { SET_INPUT_VALUE, ADD_MESSAGE, HANDLE_CLICK } from 'src/actions/chatActions';
+import { SET_INPUT_VALUE, ADD_MESSAGE, HANDLE_CLICK, SET_NEW_EMAIL_VALUE, SET_NEW_PASWORD_VALUE } from 'src/actions/chatActions';
 
 import { getHighestId } from 'src/utils';
+import { SET_NEW_PASSWORD_VALUE } from '../actions/chatActions';
 
 const initialState = {
   messages: [
@@ -19,6 +20,8 @@ const initialState = {
   inputMessage: '',
   pseudo: 'Mario',
   isOpen: true,
+  email: '',
+  password: '',
 };
 
 function chatReducer(state = initialState, action = {}) {
@@ -52,6 +55,18 @@ function chatReducer(state = initialState, action = {}) {
       return {
         ...state,
         isOpen: !state.isOpen,
+      };
+
+    case SET_NEW_EMAIL_VALUE:
+      return {
+        ...state,
+        email: action.value,
+      };
+
+    case SET_NEW_PASSWORD_VALUE:
+      return {
+        ...state,
+        password: action.value,
       };
 
     default:
