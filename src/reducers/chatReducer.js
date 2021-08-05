@@ -1,4 +1,4 @@
-import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions/chatActions';
+import { SET_INPUT_VALUE, ADD_MESSAGE, HANDLE_CLICK } from 'src/actions/chatActions';
 
 import { getHighestId } from 'src/utils';
 
@@ -18,6 +18,7 @@ const initialState = {
   // input content for entering a message
   inputMessage: '',
   pseudo: 'Mario',
+  isOpen: true,
 };
 
 function chatReducer(state = initialState, action = {}) {
@@ -46,6 +47,12 @@ function chatReducer(state = initialState, action = {}) {
         inputMessage: '',
       };
     }
+
+    case HANDLE_CLICK:
+      return {
+        ...state,
+        isOpen: !state.isOpen,
+      };
 
     default:
       return state;

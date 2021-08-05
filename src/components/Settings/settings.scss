@@ -1,0 +1,44 @@
+@use 'src/styles/vars';
+
+.settings-wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: vars.$blue-dark;
+  width: 255px;
+  transition-property: width;
+  transition-duration: 1s;
+
+
+  &.settings-wrapper--closed {
+    width: 63px;
+    transition-property: width;
+    transition-duration: 1s;
+  }
+
+  &.settings-wrapper--closed:hover {
+    width : 63px;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: column;
+    margin: vars.$space-base;
+
+    .settings__email, .settings__password, .settings__submit {
+      width: 100%;
+      height: vars.$size-base * 1.2;
+      border-radius: vars.$radius;
+      margin-block: vars.$space-base * 0.5;
+      padding-inline: vars.$space-base;
+      border: none;
+    }
+
+    .settings__submit {
+      background: vars.$violet;
+      color: vars.$white;
+    }
+  }
+}
