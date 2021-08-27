@@ -7,7 +7,7 @@
   right: 0;
   z-index: 1;
   background: vars.$blue-dark;
-  width: 255px;
+  width: 350px;
   transition-property: width;
   transition-duration: 1s;
 
@@ -26,9 +26,9 @@
     display: flex;
     flex-direction: column;
     margin: vars.$space-base;
+    width: 100%;
 
     .settings__email, .settings__password, .settings__submit {
-      width: 100%;
       height: vars.$size-base * 1.2;
       border-radius: vars.$radius;
       margin-block: vars.$space-base * 0.5;

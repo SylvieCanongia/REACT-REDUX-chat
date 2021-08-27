@@ -1,7 +1,12 @@
-import { SET_INPUT_VALUE, ADD_MESSAGE, HANDLE_CLICK, SET_NEW_EMAIL_VALUE, SET_NEW_PASWORD_VALUE } from 'src/actions/chatActions';
+import {
+  SET_INPUT_VALUE,
+  ADD_MESSAGE,
+  HANDLE_CLICK,
+  SET_NEW_EMAIL_VALUE,
+  SET_NEW_PASSWORD_VALUE,
+} from 'src/actions/chatActions';
 
 import { getHighestId } from 'src/utils';
-import { SET_NEW_PASSWORD_VALUE } from '../actions/chatActions';
 
 const initialState = {
   messages: [

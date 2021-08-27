@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import CustomButton from 'src/containers/Settings/CustomButton';
+import Field from 'src/components/Field';
 
 import './settings.scss';
 
-const Settings = ({ isOpen, emailValue, passwordValue, setEmailValue, setPasswordValue }) => {
+const Settings = ({
+  isOpen,
+  emailValue,
+  passwordValue,
+  setEmailValue,
+  setPasswordValue,
+}) => {
   const cssClass = classNames('settings-wrapper', { 'settings-wrapper--closed': isOpen === false });
 
   return (
@@ -14,25 +21,25 @@ const Settings = ({ isOpen, emailValue, passwordValue, setEmailValue, setPasswor
       <CustomButton />
       {isOpen && (
         <form className="settings">
-          <input
-            type="email"
+          <Field
             className="settings__email"
-            placeholder="Email"
+            identifier="email"
+            placeholder="happybirthday@gmail.com"
+            label="Votre adresse email :"
             value={emailValue}
-            onChange={(event) => {
-              setEmailValue(event.target.value);
+            changeField={(identifier, newValue) => {
+              console.log(`identifier: ${identifier}, newValue: ${newValue}`);
             }}
-            required
           />
-          <input
-            type="password"
+          <Field
             className="settings__password"
-            placeholder="Mot de passe"
+            identifier="password"
+            placeholder=""
+            label="Votre mot de passe"
             value={passwordValue}
-            onChange={(event) => {
-              setPasswordValue(event.target.value);
+            changeField={(identifier, newValue) => {
+              console.log(`identifier: ${identifier}, newValue: ${newValue}`);
             }}
-            required
           />
           <button type="submit" className="settings__submit">
             Envoyer
