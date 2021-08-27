@@ -14,7 +14,7 @@ const Settings = ({
   setEmailValue,
   setPasswordValue,
 }) => {
-  const cssClass = classNames('settings-wrapper', { 'settings-wrapper--closed': isOpen === false });
+  const cssClass = classNames('settings-wrapper', { 'settings-wrapper--open': isOpen });
 
   return (
     <div className={cssClass}>

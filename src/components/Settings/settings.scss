@@ -7,26 +7,26 @@
   right: 0;
   z-index: 1;
   background: vars.$blue-dark;
-  width: 350px;
+  width: 63px;
   transition-property: width;
   transition-duration: 1s;
 
 
-  &.settings-wrapper--closed {
-    width: 63px;
-    transition-property: width;
+  &.settings-wrapper--open {
+    width: 300px;
+    transition-property: width 1s;
     transition-duration: 1s;
   }
 
-  &.settings-wrapper--closed:hover {
-    width : 63px;
+  &.settings-wrapper--open:hover {
+    width : 300px;
   }
 
   .settings {
     display: flex;
     flex-direction: column;
     margin: vars.$space-base;
-    width: 100%;
+
 
     .settings__email, .settings__password, .settings__submit {
       height: vars.$size-base * 1.2;
