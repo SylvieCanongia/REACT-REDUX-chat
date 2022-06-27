@@ -24,8 +24,11 @@ const initialState = {
   // input content for entering a message
   inputMessage: '',
   pseudo: 'Mario',
+  // is settings open or not
   isOpen: true,
+  // content of email field
   email: '',
+  // content of password field
   password: '',
 };
 
