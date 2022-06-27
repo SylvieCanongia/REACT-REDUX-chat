@@ -1,4 +1,10 @@
-import { SET_INPUT_VALUE, ADD_MESSAGE, HANDLE_CLICK } from 'src/actions/chatActions';
+import {
+  SET_INPUT_VALUE,
+  ADD_MESSAGE,
+  HANDLE_CLICK,
+  SET_NEW_EMAIL_VALUE,
+  SET_NEW_PASSWORD_VALUE,
+} from 'src/actions/chatActions';
 
 import { getHighestId } from 'src/utils';
 
@@ -18,7 +24,12 @@ const initialState = {
   // input content for entering a message
   inputMessage: '',
   pseudo: 'Mario',
+  // is settings open or not
   isOpen: true,
+  // content of email field
+  email: '',
+  // content of password field
+  password: '',
 };
 
 function chatReducer(state = initialState, action = {}) {
@@ -52,6 +63,18 @@ function chatReducer(state = initialState, action = {}) {
       return {
         ...state,
         isOpen: !state.isOpen,
+      };
+
+    case SET_NEW_EMAIL_VALUE:
+      return {
+        ...state,
+        email: action.value,
+      };
+
+    case SET_NEW_PASSWORD_VALUE:
+      return {
+        ...state,
+        password: action.value,
       };
 
     default:

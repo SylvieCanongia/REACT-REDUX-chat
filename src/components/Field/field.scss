@@ -1,0 +1,36 @@
+@use 'src/styles/vars';
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  .field__label {
+    width: 100%;
+    height: vars.$size-base * 0.6;
+    border-radius: vars.$radius;
+    margin-block: vars.$space-base * 0.5;
+    padding-inline: vars.$space-base;
+    border: none;
+    color: vars.$white;
+    order: -1;
+    font-size: vars.$font-size-base * 0.7;
+  }
+
+  .field__input {
+    width: 100%;
+    height: vars.$size-base * 1.2;
+    border-radius: vars.$radius;
+    margin-block-start: vars.$space-base * 0.5;
+    margin-block-end: vars.$space-base;
+    
+    padding-inline: vars.$space-base;
+    border: none;
+    
+    &:focus {
+      border: 1px solid vars.$violet-light;
+      & + .field__label {
+        color: vars.$violet-light;
+      }
+    }
+  }
+}
